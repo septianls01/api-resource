@@ -28,16 +28,22 @@ Route::prefix('/provinces')->group(function () {
 });
 
 //Regencies
-Route::prefix('/regencies/[province_id]')->group(function () {
+Route::prefix('/regencies')->group(function () {
     Route::get('/', [RegencieController::class, 'getAllRegencies']);
-});
+    Route::get('/{id}', [RegencieController::class, 'getRegenciesWithId']);
 
-//Villages
-Route::prefix('/villages')->group(function () {
-    Route::get('/', [VillageController::class, 'getAllVillages']);
 });
 
 //Districts
 Route::prefix('/districts')->group(function () {
     Route::get('/', [DistrictController::class, 'getAllDistricts']);
+    Route::get('/{id}', [DistrictController::class, 'getDistrictsWithId']);
 });
+
+//Villages
+Route::prefix('/villages')->group(function () {
+    Route::get('/', [VillageController::class, 'getAllVillages']);
+    Route::get('/{id}', [VillageController::class, 'getVillagesWithId']);
+});
+
+

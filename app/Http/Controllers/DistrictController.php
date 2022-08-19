@@ -12,4 +12,10 @@ class DistrictController extends Controller
         $districts = District::all();
         return sendSuccess($districts, "Berhasil mendapatkan data semua district");
     }
+    public function getDistrictsWithId(Request $request)
+    {
+
+        $districts = District::where('regency_id',$request->id)->get();
+        return sendSuccess($districts, "Berhasil mendapatkan data semua regencies");
+    }
 }

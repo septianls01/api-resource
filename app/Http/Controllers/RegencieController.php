@@ -12,4 +12,10 @@ class RegencieController extends Controller
         $regencies = Regencie::all();
         return sendSuccess($regencies, "Berhasil mendapatkan data semua regencies");
     }
+    public function getRegenciesWithId(Request $request)
+    {
+
+        $regencies = Regencie::where('province_id',$request->id)->get();
+        return sendSuccess($regencies, "Berhasil mendapatkan data semua regencies");
+    }
 }
