@@ -23,12 +23,12 @@ class Regencie extends Model
      */
     protected $primaryKey = 'id';
 
-    // /**
-    //  * The primary key associated with the table.
-    //  *
-    //  * @var string
-    //  */
-    // protected $foreignKey = 'province_id';
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $foreignKey = 'province_id';
 
     /**
      * Indicates if the model should be timestamped.

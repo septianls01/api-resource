@@ -10,6 +10,7 @@ class ProvinceController extends Controller
     public function getAllProvinces(Request $request)
     {
         $provinces = Province::all();
-        return sendSuccess($provinces, "Berhasil mendapatkan data semua provinsi");
+        return sendSuccess($provinces, "");
+        // return sendSuccess($provinces, "Berhasil mendapatkan data semua provinsi");
     }
 }

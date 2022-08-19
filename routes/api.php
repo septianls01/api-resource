@@ -28,7 +28,7 @@ Route::prefix('/provinces')->group(function () {
 });
 
 //Regencies
-Route::prefix('/regencies')->group(function () {
+Route::prefix('/regencies/[province_id]')->group(function () {
     Route::get('/', [RegencieController::class, 'getAllRegencies']);
 });
 

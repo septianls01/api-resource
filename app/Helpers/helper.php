@@ -10,12 +10,9 @@ function sendError($payload, $message)
     ]);
 }
 
-function sendSuccess($payload, $message)
+function sendSuccess($payload)
 {
-    return response()->json([
-        'status' => 'SUCCESS',
-        'message' => $message,
-        'sender' => 'Data Indonesia',
-        'payload' => $payload,
-    ]);
+    return response()->json(
+        $payload,
+    );
 }
